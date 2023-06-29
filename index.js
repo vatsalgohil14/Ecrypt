@@ -38,7 +38,10 @@ mongoose
 app.use(
   cors({
     origin: [
-      "http://localhost:3000", "https://ecrypt.onrender.com"],
+      "http://localhost:3000",
+      "https://ecrypt.onrender.com",
+      "https://warm-sunburst-a6fed1.netlify.app",
+    ],
     credentials: true,
   })
 );
