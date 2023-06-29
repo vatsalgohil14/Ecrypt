@@ -8,15 +8,8 @@ const cookiesParser = require("cookie-parser");
 const path = require("path");
 const app = express();
 
-// app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
-// var corsOptions = {
-//   credentials: true,
-//   origin: "https://ecrypt.herokuapp.com",
-//   methods: ["POST", "GET", "DELETE" ,"PUT","OPTIONS"],
-//   maxAge: 3600,
-// };
-// app.use(cors(corsOptions));
+
 
 app.use(cookiesParser());
 // app.use(bodyParser.json({ limit: "30mb", extended: true }));
@@ -40,21 +33,7 @@ mongoose
   .then(() => console.log("Connected to Database :: MongoDB Cloud"))
   .catch((err) => console.log(err.message));
 
-// const allowedOrigins = [
-//   "https://ecrypt.herokuapp.com",
-//   "http://localhost:3000",
-// ];
 
-// const corsOptions = {
-//   origin: (origin, callback) => {
-//     if (allowedOrigins.includes(origin) || !origin) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Origin not allowed by CORS"));
-//     }
-//   },
-//   credentials: true,
-// };
 
 app.use(
   cors({
