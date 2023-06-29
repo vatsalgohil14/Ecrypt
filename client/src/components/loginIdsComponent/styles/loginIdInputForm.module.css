@@ -1,0 +1,1339 @@
+@import "../../variable.modules.css";
+
+.cardWrapper {
+    /* display: flex; */
+    display: none;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--box-bg-primary);
+    padding-left: 5%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* border: 1px solid black; */
+}
+
+.cardWrapperClose {
+    /* display: flex; */
+    display: none;
+    width: 0%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--box-bg-primary);
+
+    padding-left: 0%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    scroll-behavior: smooth;
+
+}
+
+.cardContainer {
+    width: 70%;
+    height: 90%;
+    /* border: 1px solid red; */
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 15% 20% 15% 10% 20% 20%;
+    grid-template-rows: 10% 20% 15% 15% 20% 20%;
+
+    grid-template-areas:
+        "cardHeader cardHeader"
+        "logoTitleWrapper logoTitleWrapper"
+        "categoryWrapper categoryWrapper"
+        "appWebSiteWrapper appWebSiteWrapper"
+        "usernameWrapper usernameWrapper"
+        "passwordWrapper passwordWrapper";
+    box-sizing: border-box;
+}
+
+.cardHeader {
+    grid-area: cardHeader;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid orange; */
+}
+
+.backBtnContainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 0%;
+    padding-top: 0%;
+}
+
+.backBtnDiv {
+    width: auto;
+    height: 22px;
+    height: 25px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0%;
+    padding-right: 5%;
+    border-radius: 5px;
+    margin-right: 10px;
+    /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+    cursor: pointer;
+}
+
+.crudBtnContainer {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid black; */
+    /* border: 1px solid skyblue; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.saveBtnDiv {
+    width: auto;
+    height: 22px;
+    height: 25px;
+    /* border: 1px solid black; */
+    background-color: #58BF6F;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 5px;
+    margin-right: 20px;
+    /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    cursor: pointer;
+}
+
+.saveBtnDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: white;
+}
+
+.crudIcons {
+    margin-right: 5px;
+}
+
+
+.logoTitleWrapper {
+    grid-area: logoTitleWrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid rgba(17, 17, 17, 0.293); */
+    padding-left: 0%;
+}
+
+.logoTitleContainer {
+    width: 100%;
+    height: 85%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0%;
+}
+
+.logoContainer {
+    /* width: auto; */
+    /* width: 30%; */
+    height: 100%;
+    aspect-ratio: 1/1;
+    /* border: 1px solid orange; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid green; */
+    margin-right: 2%;
+}
+
+.logoDiv {
+    /* width: 80%; */
+    aspect-ratio: 1/1;
+    height: 100%;
+    border: 3px solid #a8ccf9b5;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--logo-div-bg); */
+    cursor: pointer;
+
+}
+
+.logoSelectedBg {
+    background-color: var(--logo-div-bg);
+}
+
+.logoIcon {
+    width: 100%;
+    height: 100%;
+}
+
+.titleContainer {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 5%;
+    /* border: 1px solid red; */
+}
+
+.titleLabelDiv {
+    width: 80%;
+    height: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.titleLabelDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+}
+
+.titleInputDiv {
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.titleInputDiv input {
+    width: 90%;
+    height: 100%;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+}
+
+/* .titleLabelText {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight:var(--bold-font);
+    color: black;
+} */
+
+.categoryWrapper {
+    grid-area: categoryWrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(182, 69, 88); */
+    padding-left: 0%;
+}
+
+.categoryContainer {
+    width: 100%;
+    height: 60%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--box-bg-tertiary);
+    border-radius: 10px;
+
+}
+
+.categoryLabelContainer {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.categoryLabelContainer p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: var(--bolder-font);
+    color: var(--primary-font-color);
+}
+
+.catergoryInputDiv {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.categoryInput {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: var(--bold-font);
+    color: var(--ui-scheme-color);
+    background-color: var(--category-box-bg);
+    border: none;
+    outline: none !important;
+    height: 75%;
+    width: 80%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popUpBtnIconDiv {
+    width: 15%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUpIcon {
+    font-size: 20px;
+    color: var(--primary-font-color);
+    cursor: pointer;
+
+}
+
+.categoryInput:focus {
+    /* border: 1px solid #0475ff84; */
+}
+
+.categoryInputPopDiv {
+    top: 115%;
+    position: absolute;
+    width: 150px;
+    right: 10%;
+    height: auto;
+    background-color: var(--box-bg-tertiary-drk);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    border-radius: 5px;
+    box-shadow: var(--applogo-box-shadow);
+}
+
+
+.inputPopUpText {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+    margin: 5px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid var(--box-bg-tertiary);
+    padding-left: 8%;
+    padding-right: 5%;
+    width: 90%;
+    letter-spacing: 0.3px;
+}
+
+.inputPopUpText:hover {
+    background-color: #a8ccf9b5;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.appWebSiteWrapper {
+    grid-area: appWebSiteWrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid purple; */
+    padding-left: 0%;
+}
+
+.appWebSiteContainer {
+    width: 100%;
+    height: 60%;
+    /* border: 1px solid black; */
+    display: flex;
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+        "appWebSiteIconDiv appWebsiteLabelDiv appWebsiteInputDiv";
+    background-color: var(--box-bg-tertiary);
+    border-radius: 10px;
+
+}
+
+.appWebSiteIconDiv {
+    grid-area: appWebSiteIconDiv;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.websiteIcon {
+    font-size: 25px;
+    color: var(--field-icon-color);
+
+}
+
+.appWebsiteLabelDiv {
+    grid-area: appWebsiteLabelDiv;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.appWebsiteLabelDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+}
+
+.appWebsiteInputDiv {
+    grid-area: appWebsiteInputDiv;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.appWebsiteInputDiv input {
+    width: 80%;
+    height: 80%;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+}
+
+.usernameWrapper {
+    grid-area: usernameWrapper;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid orange; */
+    padding-left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.usernameContainer {
+    width: 100%;
+    height: 70%;
+    /* border: 1px solid black; */
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "usernameIconDiv usernameLabelDiv"
+        "usernameIconDiv usernameInputDiv";
+    background-color: var(--box-bg-tertiary);
+    border-radius: 10px;
+
+
+}
+
+.usernameIconDiv {
+    grid-area: usernameIconDiv;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usernameIcon {
+    width: 50%;
+    height: 50%;
+    color: var(--field-icon-color);
+
+}
+
+.usernameLabelDiv {
+    grid-area: usernameLabelDiv;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.usernameLabelDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+}
+
+.usernameInputDiv {
+    grid-area: usernameInputDiv;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.usernameInputDiv input {
+    width: 80%;
+    height: 80%;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+}
+
+
+.passwordWrapper {
+    grid-area: passwordWrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid orange; */
+    padding-left: 0%;
+
+}
+
+.passwordContainer {
+    width: 100%;
+    height: 70%;
+    /* border: 1px solid black; */
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "passwordIconDiv passwordLabelDiv"
+        "passwordIconDiv passwordInputDiv";
+    background-color: var(--box-bg-tertiary);
+    border-radius: 10px;
+
+
+}
+
+.passwordIconDiv {
+    grid-area: passwordIconDiv;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passwordIcon {
+    width: 55%;
+    height: 55%;
+    color: var(--field-icon-color);
+}
+
+.passwordLabelDiv {
+    grid-area: passwordLabelDiv;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.passwordLabelDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+}
+
+.passwordInputDiv {
+    grid-area: passwordInputDiv;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.passwordInputDiv input {
+    width: 80%;
+    height: 100%;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+    /* border: 1px solid red; */
+}
+
+.passwordGeneratorIconContainer {
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.passwordGeneratorIconDiv {
+    height: 55%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passGeneratorIcon {
+    width: 100%;
+    height: 100%;
+}
+
+.focusFieldStyle {
+    border: 2px solid var(--ui-scheme-color);
+    border-radius: 15px !important;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+    .cardWrapper {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 0%;
+        margin-bottom: 0.2%;
+        transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .cardWrapperClose {
+        display: flex;
+        width: 100%;
+        height: 0%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0%;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px;
+        transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+
+    .cardContainer {
+        /* border: 1px solid black; */
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 25% minmax(0, 1fr);
+        grid-template-rows: 10% 17% 14% 14% 22% 22%;
+        grid-template-rows: 10% 18% 14% 14% 22% 22%;
+        grid-template-rows: 10% 20% 15% 15% 20% 20%;
+        grid-template-areas:
+            "cardHeader cardHeader"
+            "logoTitleWrapper logoTitleWrapper"
+            "categoryWrapper categoryWrapper"
+            "appWebSiteWrapper appWebSiteWrapper"
+            "usernameWrapper usernameWrapper"
+            "passwordWrapper passwordWrapper";
+        padding-bottom: 0%;
+        padding-top: 0%;
+        box-sizing: border-box;
+
+    }
+
+    .cardHeader {
+        grid-area: cardHeader;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid orange; */
+    }
+
+    .backBtnContainer {
+        width: 50%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 5%;
+        padding-top: 0%;
+    }
+
+    .backBtnDiv {
+        width: 50%;
+        height: 52%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .crudBtnContainer {
+        width: 50%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .saveBtnDiv {
+        width: auto;
+        height: 55%;
+    }
+
+    .logoTitleWrapper {
+        grid-area: logoTitleWrapper;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid blue; */
+        padding-left: 0%;
+    }
+
+    .logoTitleContainer {
+        width: 90%;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoContainer {
+        /* width: auto; */
+        /* width: 30%; */
+        height: 100%;
+        aspect-ratio: 1/1;
+        /* border: 1px solid orange; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        /* border: 1px solid green; */
+        margin-right: 2%;
+
+    }
+
+    .logoDiv {
+        /* width: 80%; */
+        aspect-ratio: 1/1;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid #a8ccf9b5;
+        border-radius: clamp(0.9rem, 0.09999999999999998rem + 4.0vw, 1.3rem) !important;
+
+    }
+
+    .logoIcon {
+        width: 100%;
+        height: 100%;
+    }
+
+    .titleContainer {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-left: 5%;
+    }
+
+    .titleLabelDiv {
+        width: 80%;
+        height: 80%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .titleLabelDiv p {
+        font-size: 1rem;
+        font-size: clamp(0.7rem, 0.09999999999999987rem + 3.0000000000000004vw, 1.0rem) !important;
+
+    }
+
+    .titleInputDiv {
+        width: 90%;
+        height: 100%;
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .titleInputDiv p {
+        font-size: 1.5rem;
+        font-size: clamp(1.1rem, 0.30000000000000027rem + 3.9999999999999996vw, 1.5rem) !important;
+
+    }
+
+    .categoryWrapper {
+        grid-area: categoryWrapper;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid rgb(182, 69, 88); */
+        padding-left: 0%;
+
+    }
+
+    .categoryContainer {
+        width: 90%;
+        height: 60%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border-radius: clamp(0.5rem, 0.0rem + 2.5vw, 0.75rem) !important;
+
+    }
+
+    .categoryLabelContainer {
+        width: 40%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 5%;
+    }
+
+    .categoryLabelContainer p {
+        font-size: 1.2rem;
+        margin: 0px;
+        padding: 0px;
+        font-size: clamp(1.0rem, 0.0rem + 5.0vw, 1.5rem) !important;
+
+    }
+
+    .catergoryInputDiv {
+        position: relative;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+
+    .categoryInput {
+        font-size: 1.1rem;
+        outline: none !important;
+        height: 80%;
+        width: 85%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: clamp(0.85rem, -0.15000000000000024rem + 5.000000000000001vw, 1.35rem) !important;
+
+    }
+
+    .popUpBtnIconDiv {
+        width: 15%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popUpIcon {
+        font-size: 20px;
+    }
+
+    .categoryInput:focus {
+        /* border: 1px solid #0475ff84; */
+    }
+
+    .categoryInputPopDiv {
+        top: 110%;
+        right: 20%;
+        position: absolute;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 10%;
+        padding-right: 30%;
+        border-radius: 5px;
+    }
+
+    .inputPopUpText {
+        margin: 15% 0px 0px 0px;
+        font-size: clamp(0.75rem, -0.1499999999999999rem + 4.5vw, 1.2rem) !important;
+    }
+
+    .inputPopUpText:hover {
+        /* background-color: red; */
+        width: 80%;
+    }
+
+    .appWebSiteWrapper {
+        grid-area: appWebSiteWrapper;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid purple; */
+        padding-left: 0%;
+    }
+
+
+    .appWebSiteContainer {
+        width: 90%;
+        height: 60%;
+        /* border: 1px solid black; */
+        display: flex;
+
+        display: grid;
+        grid-template-columns: 20% 40% 40%;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "appWebSiteIconDiv appWebsiteLabelDiv appWebsiteInputDiv";
+        border-radius: 10px;
+        border-radius: clamp(0.5rem, 0.0rem + 2.5vw, 0.75rem) !important;
+
+
+    }
+
+    .appWebSiteIconDiv {
+        grid-area: appWebSiteIconDiv;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .websiteIcon {
+        height: 50%;
+    }
+
+    .appWebsiteLabelDiv {
+        grid-area: appWebsiteLabelDiv;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .appWebsiteLabelDiv p {
+        font-size: 1rem;
+        font-size: clamp(0.9rem, 0.30000000000000016rem + 2.999999999999999vw, 1.2rem) !important;
+
+    }
+
+    .appWebsiteInputDiv {
+        grid-area: appWebsiteInputDiv;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+    }
+
+    .appWebsiteInputDiv input {
+        width: 80%;
+        height: 100%;
+        border-bottom: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        background: transparent;
+        font-size: 1rem;
+        font-size: clamp(0.75rem, 0.1499999999999999rem + 3.0000000000000004vw, 1.05rem) !important;
+
+    }
+
+    .usernameWrapper {
+        grid-area: usernameWrapper;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid orange; */
+        padding-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .usernameContainer {
+        width: 90%;
+        height: 70%;
+        /* border: 1px solid black; */
+        display: grid;
+        align-items: center;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+            "usernameIconDiv usernameLabelDiv"
+            "usernameIconDiv usernameInputDiv";
+        border-radius: 10px;
+        border-radius: clamp(0.7rem, -0.10000000000000031rem + 4.000000000000002vw, 1.1rem) !important;
+
+
+    }
+
+    .usernameIconDiv {
+        grid-area: usernameIconDiv;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .usernameIcon {
+        width: 50%;
+        height: 50%;
+    }
+
+    .usernameLabelDiv {
+        grid-area: usernameLabelDiv;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .usernameLabelDiv p {
+        font-size: 0.9rem;
+        font-size: clamp(0.75rem, 0.04999999999999982rem + 3.500000000000001vw, 1.1rem) !important;
+
+    }
+
+
+    .usernameInputDiv {
+        grid-area: usernameInputDiv;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+
+    .usernameInputDiv input {
+        font-size: 0.9rem;
+        font-size: clamp(0.75rem, 0.04999999999999982rem + 3.500000000000001vw, 1.1rem) !important;
+
+    }
+
+
+    .passwordWrapper {
+        grid-area: passwordWrapper;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid orange; */
+        padding-left: 0%;
+
+    }
+
+    .passwordContainer {
+        width: 90%;
+        height: 70%;
+        /* border: 1px solid black; */
+        display: grid;
+        align-items: center;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+            "passwordIconDiv passwordLabelDiv"
+            "passwordIconDiv passwordInputDiv";
+        background-color: var(--box-bg-tertiary);
+        border-radius: 10px;
+        border-radius: clamp(0.7rem, -0.10000000000000031rem + 4.000000000000002vw, 1.1rem) !important;
+    }
+
+    .passwordIconDiv {
+        grid-area: passwordIconDiv;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .passwordIcon {
+        width: 55%;
+        height: 55%;
+    }
+
+    .passwordLabelDiv {
+        grid-area: passwordLabelDiv;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .passwordLabelDiv p {
+        font-size: 0.9rem;
+        font-size: clamp(0.75rem, 0.04999999999999982rem + 3.500000000000001vw, 1.1rem) !important;
+
+    }
+
+    .passwordInputDiv {
+        grid-area: passwordInputDiv;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .passwordInputDiv input {
+        font-size: 0.9rem;
+        font-size: clamp(0.75rem, 0.04999999999999982rem + 3.500000000000001vw, 1.1rem) !important;
+
+    }
+
+
+
+
+    /* ----------------------------------------------
+ * Generated by Animista on 2022-11-28 19:46:20
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+    /**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+    @-webkit-keyframes slide-in-bottom {
+        0% {
+            -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in-bottom {
+        0% {
+            -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .cardWrapper {
+        /* display: flex; */
+        display: none;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: var(--box-bg-primary);
+        /* background-color: transparent; */
+        padding-left: 5%;
+        webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        /* border: 1px solid black; */
+    }
+
+    .cardWrapperClose {
+        /* display: flex; */
+        display: none;
+        width: 0%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: var(--box-bg-primary);
+        padding-left: 0%;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        scroll-behavior: smooth;
+
+    }
+
+    .cardContainer {
+        width: 95%;
+        height: 50%;
+        /* border: 1px solid red; */
+        /* border: 1px solid black; */
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 15% 20% 15% 10% 20% 20%;
+        grid-template-rows: 10% 20% 15% 15% 20% 20%;
+        grid-template-areas:
+            "cardHeader cardHeader"
+            "logoTitleWrapper logoTitleWrapper"
+            "categoryWrapper categoryWrapper"
+            "appWebSiteWrapper appWebSiteWrapper"
+            "usernameWrapper usernameWrapper"
+            "passwordWrapper passwordWrapper";
+        box-sizing: border-box;
+        margin-top: 5%;
+        /* background-color: white; */
+    }
+
+}

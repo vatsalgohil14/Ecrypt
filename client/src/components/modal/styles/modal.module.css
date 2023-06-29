@@ -1,0 +1,196 @@
+@import "../../variable.modules.css";
+
+.modalWrapperOpen {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 30%; */
+    /* height: 180px; */
+    background-color: var(--box-bg-tertiary-drk);
+    border-radius: 10px;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* border: 1px solid red; */
+}
+
+
+
+.modalWrapperClose {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 0%;
+    height: 0%;
+    background-color: white;
+    background-color: var(--box-bg-tertiary-drk);
+    border-radius: 10px;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* border: 1px solid red; */
+    /* opacity: 0; */
+    scale: 0;
+}
+
+.modalContainer {
+    width: 90%;
+    height: 90%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContainerClose {
+    /* opacity: 0; */
+}
+
+.iconContainer {
+    width: 100%;
+    height: 25%;
+    /* border: 1px solid black; */
+    color: #DC4543;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.warningIcon {
+    font-size: 2.5rem;
+}
+
+.dialogContainer {
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid black; */
+
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.textTopDiv {
+    width: 100%;
+    height: 40%;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* padding-bottom: 2%; */
+    /* border: 1px solid red; */
+}
+
+.textTopDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: var(--bolder-font);
+    color: var(--primary-font-color);
+}
+
+.textBottomDiv {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.textBottomDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    font-weight: var(--bold-font);
+    color: var(--secondary-font-color);
+    margin-top: 1%;
+}
+
+.btnContainer {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.deleteBtnDiv {
+    width: 30%;
+    height: 60%;
+    border-radius: 0.3rem;
+    background-color: #DC4543;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deleteBtnDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    font-weight: var(--bold-font);
+    color: white;
+}
+
+.cancelBtnDiv {
+    width: 30%;
+    height: 60%;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--box-bg-secondary-drk);
+    background-color: #B4B3BA;
+}
+
+.cancelBtnDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    font-weight: var(--bold-font);
+    color: white;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+    .cancelBtnDiv p {
+        font-size: clamp(0.65rem, -0.04999999999999993rem + 3.4999999999999996vw, 1.0rem) !important;
+    }
+
+    .deleteBtnDiv p {
+        font-size: clamp(0.65rem, -0.04999999999999993rem + 3.4999999999999996vw, 1.0rem) !important;
+    }
+
+    .textBottomDiv p {
+        margin-top: 1%;
+        font-size: clamp(0.65rem, 0.050000000000000155rem + 2.999999999999999vw, 0.95rem) !important;
+    }
+
+    .textTopDiv p {
+        font-size: clamp(0.9rem, 0.09999999999999998rem + 4.0vw, 1.3rem) !important;
+    }
+
+    .warningIcon {
+        font-size: clamp(2.1rem, -0.6999999999999997rem + 13.999999999999998vw, 3.5rem) !important;
+    }
+
+    .cancelBtnDiv {
+        border-radius: clamp(0.3rem, -0.20000000000000012rem + 2.5000000000000004vw, 0.55rem) !important;
+    }
+
+    .deleteBtnDiv {
+        border-radius: clamp(0.3rem, -0.20000000000000012rem + 2.5000000000000004vw, 0.55rem) !important;
+    }
+}

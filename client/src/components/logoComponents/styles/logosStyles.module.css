@@ -1,0 +1,113 @@
+.logoWrapper {
+    position: relative;
+    aspect-ratio: 1/1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    border-radius: 15px;
+    padding-top: 10%;
+    /* border: 1px solid red; */
+    cursor: pointer;
+
+}
+
+.logoWrapperActive {
+    position: relative;
+    aspect-ratio: 1/1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    background-color: #A6CBFB;
+    background-color: var(--box-bg-secondary-drk);
+    border-radius: 15px;
+    border-radius: 0.85rem;
+    padding-top: 10%;
+    /* padding-top: 5%; */
+    /* border: 1px solid red; */
+    cursor: pointer;
+
+}
+
+.logoContainer {
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 83%;
+    border-radius: 0.65rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--logo-div-bg);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    box-shadow: var(--logoComp-logo-box-shadow);
+}
+
+.logoDiv {
+    /* border: 1px solid black; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+
+
+.svgStyles {
+    position: relative;
+    width: 70%;
+    /* border: 1px solid #000; */
+}
+
+.logoLabelContainer {
+    width: 80%;
+    /* height: 30%; */
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.logoLabelContainer p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.60rem;
+    font-weight: var(--bolder-font);
+    color: var(--primary-font-color);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .logoLabelContainer p {
+        font-size: 0.70rem;
+        font-weight: var(--bolder-font);
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    .logoLabelContainer p {
+        font-size: 0.8rem;
+        font-weight: var(--bold-font);
+        color: var(--primary-font-color);
+    }
+
+    .logoWrapperActive {
+        border-radius: 1rem;
+    }
+
+    .logoContainer {
+        border-radius: 1rem;
+    }
+}

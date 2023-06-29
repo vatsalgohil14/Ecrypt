@@ -1,0 +1,991 @@
+@import "../../variable.modules.css";
+
+.headerBar {
+  position: relative;
+  grid-area: headerBar;
+  /* border: 1px solid orange; */
+  height: 100%;
+  width: 100% !important;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30% 65% 5%;
+  grid-template-rows: 100%;
+  grid-template-areas: "dateWrapper avatarNameWrapper popUpWrapper";
+  align-items: center;
+}
+
+
+.dateWrapper {
+  position: relative;
+  grid-area: dateWrapper;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dateWrapper::after {
+  position: absolute;
+  content: " ";
+  background-color: var(--ui-scheme-color);
+  width: 3px;
+  height: 60%;
+  bottom: auto;
+  top: 20%;
+  left: 0px;
+  border-radius: 10px;
+}
+
+.dayDiv {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-left: 8%;
+}
+
+.dateDiv {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 8%;
+}
+
+.dayText {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: var(--bolder-font);
+  color: var(--ui-scheme-color);
+}
+
+.dateText {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: var(--bolder-font);
+  color: var(--primary-font-color);
+}
+
+
+.avatarNameWrapper {
+  grid-area: avatarNameWrapper;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nameContainer {
+  width: 20%;
+  height: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.nameText {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: var(--boldest-font);
+  color: var(--ui-scheme-color);
+}
+
+.grettingText {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: var(--bolder-font);
+  color: var(--secondary-font-color);
+}
+
+.avatarContainer {
+  height: 100%;
+  /* width: 10%; */
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatarDiv {
+  background-color: var(--box-bg-secondary-li);
+  width: 60%;
+  height: 60%;
+  /* border: 1px solid #7e8da423; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  border: 2px solid var(--ui-scheme-color);
+  box-sizing: border-box;
+}
+
+.avatarImgDiv {
+  position: relative;
+  width: 88%;
+  height: 88%;
+  border: 1px solid #7e8da453;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13); */
+  /* box-shadow: 0px 2.00614px 8.02457px rgba(0, 0, 0, 0.09); */
+  overflow: hidden;
+}
+
+.avatarImgDiv img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+/* _____________________________________________________________ */
+
+.popUpWrapper {
+  position: relative;
+  grid-area: popUpWrapper;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100%;
+  /* aspect-ratio: 1/1; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.popUpIcon {
+  position: relative;
+  width: 40%;
+  height: 40%;
+  /* border: 1px solid black; */
+  cursor: pointer;
+
+}
+
+
+.popUpMenuContainer {
+  position: absolute;
+  right: 50%;
+  top: 90% !important;
+  width: 150px;
+  height: 170px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% 30%;
+  grid-template-areas:
+    "topSection"
+    "bottomSection";
+  z-index: 900;
+  border-radius: 5px;
+  overflow: hidden;
+  grid-gap: 2%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.topSection {
+  position: relative;
+  grid-area: topSection;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--box-bg-primary);
+
+}
+
+/* ___________________________________ */
+.themeToggleWrapper {
+  position: relative;
+  height: 50%;
+  width: 80%;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.toggleContainer {
+  position: absolute;
+  width: 100%;
+  height: 55%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F3F5F9;
+  background-color: var(--box-bg-secondary);
+  border-radius: 10px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding: 0;
+}
+
+.toggleDiv {
+  position: absolute;
+  width: 97%;
+  height: 88%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  /* background-color: #F3F5F9; */
+  /* background-color: var(--box-bg-secondary); */
+  /* border-radius: 10px; */
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.toggleBtnDivLeft {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  background-color: var(--box-bg-primary);
+  border-radius: 8px;
+  margin-left: 0%;
+  margin-right: 50%;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  cursor: pointer;
+
+}
+
+.toggleBtnDivRight {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  background-color: white;
+  background-color: var(--box-bg-tertiary);
+  border-radius: 8px;
+  margin-left: 50%;
+  margin-right: 0%;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  cursor: pointer;
+
+}
+
+
+.toggleIconDiv {
+  width: 35%;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.toggleIconLight {
+  font-size: 17px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.toggleIconDark {
+  font-size: 14px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+.toggleTextDiv {
+  width: 65%;
+  height: 100%;
+  /* border: 1px solid orange; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5%;
+  box-sizing: border-box;
+}
+
+
+.toggleBtnText {
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--bolder-font);
+  font-size: 10px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: var(--primary-font-color);
+}
+
+.settingsLinkContainer {
+  height: 40%;
+  width: 80%;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.iconDiv {
+  height: 50%;
+  aspect-ratio: 1/1;
+  /* border: 1px solid red; */
+  margin-right: 8%;
+}
+
+.settingsText {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: var(--bolder-font);
+  color: var(--primary-font-color);
+  text-decoration: none;
+}
+
+.bottomSection {
+  grid-area: bottomSection;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--box-bg-primary);
+}
+
+.logOutDiv {
+  position: relative;
+  width: 80%;
+  height: 70%;
+  /* border: 1px solid orange; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.logOutIconDiv {
+  position: relative;
+  height: 80%;
+  aspect-ratio: 1/1;
+  margin-right: 5%;
+}
+
+.logoutText {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: var(--bolder-font);
+  color: #D64339;
+}
+
+/* _____________________________________________________________ */
+
+.logoWrapper {
+  position: relative;
+  grid-area: logoWrapper;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+
+.logoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  aspect-ratio: 1/1;
+  /* border: 1px solid red; */
+}
+
+/* _______________________________ */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .headerBar {
+    position: relative;
+    grid-area: headerBar;
+    /* border: 1px solid orange; */
+    height: 100%;
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 20% 25% 45% 10%;
+    grid-template-rows: 100%;
+    grid-template-areas: "logoWrapper dateWrapper avatarNameWrapper popUpWrapper";
+    align-items: center;
+    overflow: unset;
+    box-sizing: border-box;
+  }
+
+  .logoWrapper {
+    grid-area: logoWrapper;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+  }
+
+  /* 
+  .logoDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .appLogo {
+    width: 85%;
+  } */
+
+  .dateWrapper {
+    grid-area: dateWrapper;
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .dateWrapper::after {
+    position: absolute;
+    content: " ";
+    width: 2px;
+    height: 40%;
+    bottom: auto;
+    top: 30%;
+    left: 5%;
+    border-radius: 10px;
+  }
+
+  .dayDiv {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 20%;
+    box-sizing: border-box;
+
+  }
+
+  .dateDiv {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20%;
+    box-sizing: border-box;
+
+  }
+
+  .dayText {
+    font-size: 12px;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.6rem;
+    font-size: 1rem;
+    font-size: clamp(0.6rem, -0.20000000000000007rem + 4.0vw, 1.0rem) !important;
+  }
+
+  .dateText {
+    font-size: 12px;
+    font-weight: var(--boldest-font);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.5rem;
+    font-size: 0.9rem;
+    font-size: clamp(0.5rem, -0.30000000000000004rem + 4.0vw, 0.9rem) !important;
+  }
+
+
+  .avatarNameWrapper {
+    grid-area: avatarNameWrapper;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+
+  }
+
+  .nameContainer {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* border: 1px solid white; */
+  }
+
+  .nameText {
+    font-size: 15px;
+    font-weight: var(--boldest-font);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.7rem;
+    font-size: 1rem;
+    font-size: clamp(0.7rem, 0.09999999999999987rem + 3.0000000000000004vw, 1.0rem) !important;
+  }
+
+  .grettingText {
+    font-size: 14px;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.7rem;
+    font-size: 1rem;
+    font-size: clamp(0.7rem, 0.09999999999999987rem + 3.0000000000000004vw, 1.0rem) !important;
+  }
+
+  .avatarContainer {
+    height: 100%;
+    width: 50%;
+    aspect-ratio: unset;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avatarDiv {
+    aspect-ratio: 1/1;
+    width: 65%;
+    height: unset;
+    /* border: 1px solid #7e8da423; */
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border-radius: 1rem;
+    border-radius: 1.4rem;
+    border-radius: clamp(1.0rem, 0.20000000000000018rem + 3.9999999999999996vw, 1.4rem) !important;
+  }
+
+  .avatarImgDiv {
+    position: relative;
+    width: 88%;
+    height: 88%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.13); */
+    /* box-shadow: 0px 2.00614px 8.02457px rgba(0, 0, 0, 0.09); */
+    overflow: hidden;
+    border-radius: 0.8rem;
+    border-radius: 1.1rem;
+    border-radius: clamp(0.8rem, 0.19999999999999996rem + 3.0000000000000004vw, 1.1rem) !important;
+
+  }
+
+  .avatarImgDiv img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+  }
+
+  .popUpWrapper {
+    position: relative;
+    grid-area: popUpWrapper;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .popUpIcon {
+    position: relative;
+    width: 45%;
+    height: 45%;
+    /* border: 1px solid white; */
+  }
+
+  .popUpMenuContainer {
+    position: absolute;
+    right: 50%;
+    top: 90% !important;
+    width: clamp(8.0rem, 0.0rem + 40.0vw, 12.0rem) !important;
+    height: unset;
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70% 30%;
+    grid-template-areas:
+      "topSection"
+      "bottomSection";
+    z-index: 900;
+    border-radius: 5px;
+    overflow: hidden;
+    grid-gap: 2%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .topSection {
+    position: relative;
+    grid-area: topSection;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .themeToggleWrapper {
+    position: relative;
+    height: 50%;
+    width: 80%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggleContainer {
+    border-radius: clamp(0.5rem, 0.10000000000000009rem + 1.9999999999999998vw, 0.7rem) !important;
+  }
+
+  .toggleBtnDivLeft {
+    border-radius: clamp(0.4rem, 1.1102230246251565e-16rem + 1.9999999999999998vw, 0.6rem) !important;
+  }
+
+  .toggleBtnDivRight {
+    border-radius: clamp(0.4rem, 1.1102230246251565e-16rem + 1.9999999999999998vw, 0.6rem) !important;
+  }
+
+  .toggleIconDiv {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .toggleIconLight {
+    font-size: 1rem;
+    font-size: clamp(0.7rem, 0.09999999999999987rem + 3.0000000000000004vw, 1.0rem) !important;
+  }
+
+  .toggleIconDark {
+    font-size: 1rem;
+    font-size: 0.7rem;
+    font-size: clamp(0.7rem, 0.09999999999999987rem + 3.0000000000000004vw, 1.0rem) !important;
+
+  }
+
+  .toggleTextDiv {
+    width: 65%;
+    height: 100%;
+    /* border: 1px solid orange; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8%;
+    box-sizing: border-box;
+  }
+
+  .toggleTextDiv p {
+    /* font-size: clamp(0.5rem, 0.10000000000000009rem + 1.9999999999999998vw, 0.7rem) !important; */
+    font-size: clamp(0.55rem, 0.050000000000000044rem + 2.5vw, 0.8rem) !important;
+    font-weight: var(--bolder-font);
+  }
+
+  .settingsLinkContainer {
+    height: 40%;
+    width: 80%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2%;
+  }
+
+  .settingsIcon {
+    margin-right: 5%;
+  }
+
+  .settingsText {
+    font-size: clamp(0.8rem, 0.19999999999999996rem + 3.0000000000000004vw, 1.1rem) !important;
+    font-weight: var(--bolder-font);
+  }
+
+  .bottomSection {
+    grid-area: bottomSection;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logOutDiv {
+    width: 80%;
+    height: 70%;
+    /* border: 1px solid orange; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2%;
+
+  }
+
+  .logoutIcon {
+    margin-right: 5%;
+  }
+
+  .logoutText {
+    font-size: clamp(0.8rem, 0.19999999999999996rem + 3.0000000000000004vw, 1.1rem) !important;
+    font-weight: var(--bolder-font);
+  }
+
+
+  /* _______________________________ */
+
+}
+
+/* @media only screen and (min-device-width: 481px) and (max-device-width: 1020px) {
+  .avatarContainer {
+    height: unset;
+    width: 20%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avatarDiv {
+    width: unset;
+    height: 40%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+  }
+
+  .popUpWrapper {
+    position: relative;
+    grid-area: popUpWrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .popUpIcon {
+    position: relative;
+    width: 60%;
+    height: unset;
+    aspect-ratio: 1/1;
+  }
+
+  .dateWrapper {
+    grid-area: dateWrapper;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .dayDiv {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 10%;
+    box-sizing: border-box;
+
+  }
+
+  .dateDiv {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 10%;
+    box-sizing: border-box;
+
+  }
+
+  .grettingText {
+    font-size: 1.1rem;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .nameText {
+    font-size: 1rem;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+  .dayText {
+    font-size: 1.2rem;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .dateText {
+    font-size: 1rem;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+  }
+
+} */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .avatarContainer {
+    height: unset;
+    width: 20%;
+    aspect-ratio: 1/1;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avatarDiv {
+    width: unset;
+    height: 40%;
+    aspect-ratio: 1/1;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+  }
+
+  .popUpWrapper {
+    position: relative;
+    grid-area: popUpWrapper;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .popUpIcon {
+    position: relative;
+    width: 60%;
+    height: unset;
+    aspect-ratio: 1/1;
+    /* border: 1px solid black; */
+  }
+
+  .dateWrapper {
+    grid-area: dateWrapper;
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .dayDiv {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 10%;
+    box-sizing: border-box;
+
+  }
+
+  .dateDiv {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 10%;
+    box-sizing: border-box;
+
+  }
+
+  .grettingText {
+    font-size: 1.1rem;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .nameText {
+    font-size: 1rem;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+  .dayText {
+    font-size: 1.2rem;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .dateText {
+    font-size: 1rem;
+    font-weight: var(--bolder-font);
+    margin: 0px;
+    padding: 0px;
+  }
+
+}

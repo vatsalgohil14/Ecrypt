@@ -1,0 +1,436 @@
+@import "../../variable.modules.css";
+
+.searchTitleSection {
+    grid-area: searchTitleSection;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid orange; */
+}
+
+
+
+.searchInputWrapper {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 5%;
+}
+
+.falseSearchContainer {
+    width: 70%;
+    height: 50%;
+    /* border: 1px solid black; */
+    background-color: var(--box-bg-primary);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+
+}
+
+.searchIconDiv {
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid salmon; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* padding-left: 2%; */
+    /* padding-right: 2%; */
+}
+
+.searchTextDiv {
+    width: 60%;
+    height: 100%;
+    /* border: 1px solid skyblue; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding-left: 5%; */
+    /* padding-right: 15%; */
+    /* padding: 0; */
+}
+
+.searchIcon {
+    font-size: 300px;
+    margin-right: 10px;
+}
+
+.searchText {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-size: 0.95rem;
+    font-weight: 450;
+    color: var(--ui-scheme-color);
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.trueSearchContainer {
+    width: 70%;
+    height: 50%;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    background-color: var(--box-bg-primary);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.searchInputDiv {
+    width: 90%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    text-align: start;
+    padding-left: 20%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 450;
+    color: var(--primary-font-color);
+    margin: 0px;
+}
+
+.searchIcon {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: var(--ui-scheme-color);
+}
+
+
+.searchCancelIconDiv {
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.searchCancelIcon {
+    font-size: 15px;
+    color: var(--primary-font-color);
+    cursor: pointer;
+
+
+}
+
+.listTitleWrapper {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid skyblue; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+}
+
+.listTitleTextDiv {
+    width: auto;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    margin-left: 5%;
+    /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+}
+
+.searchResultText {
+    position: relative;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-font-color);
+    /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+
+}
+
+.listTitleText {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    /* font-weight:var(--bold-font); */
+    /* font-weight:var(--boldest-font); */
+    color: var(--primary-font-color);
+    /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+
+}
+
+.listTitleTextSearch {
+    font-size: 18px !important;
+}
+
+.listTitleText::after {
+    position: absolute;
+    content: " ";
+    background-color: var(--ui-scheme-color);
+    width: 40%;
+    height: 0.15rem;
+    bottom: -8px;
+    left: 0px;
+    border-radius: 3rem;
+    /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+
+}
+
+.listCountDiv {
+    height: 25%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ui-scheme-color);
+    border-radius: 0.3rem;
+    margin-left: 10px;
+    /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+}
+
+.listCountDiv p {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 9px;
+    font-weight: var(--bolder-font);
+    color: var(--listCount-font-color);
+    margin-top: 2px;
+    padding: 0px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+    .searchTitleSection {
+        grid-area: searchTitleSection;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid orange; */
+    }
+
+    .searchInputWrapper {
+        width: 50%;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-sizing: border-box;
+        padding-right: 6%;
+        padding-left: 0;
+    }
+
+    .falseSearchContainer {
+        width: 70%;
+        height: 90%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: clamp(0.4rem, 1.1102230246251565e-16rem + 1.9999999999999998vw, 0.6rem) !important;
+        /* padding-left: 5%; */
+        /* padding-right: 5%; */
+        box-sizing: border-box;
+    }
+
+    .searchIconDiv {
+        width: 40%;
+        height: 100%;
+        /* border: 1px solid salmon; */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        /* padding-left: 2%; */
+        /* padding-right: 2%; */
+    }
+
+    .searchTextDiv {
+        width: 60%;
+        height: 100%;
+        /* border: 1px solid skyblue; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        /* padding-left: 5%; */
+        /* padding-right: 15%; */
+        /* padding: 0; */
+    }
+
+    .searchIcon {
+        /* font-size: clamp(1.0rem, 0.6000000000000001rem + 1.9999999999999998vw, 1.2rem) !important; */
+        /* font-size: 1rem; */
+        /* font-size: 1.4rem; */
+        /* font-size: clamp(1.1rem, 0.30000000000000027rem + 3.9999999999999996vw, 1.5rem) !important; */
+        /* margin-right: 15%; */
+        font-size: clamp(1.0rem, 0.20000000000000018rem + 3.9999999999999996vw, 1.4rem) !important;
+    }
+
+    .searchText {
+        position: relative;
+        font-weight: var(--bold-font);
+        margin: 0px;
+        /* font-size: 0.75rem; */
+        /* font-size: 1.15rem; */
+        /* font-size: clamp(0.8rem, 2.220446049250313e-16rem + 3.9999999999999996vw, 1.2rem) !important; */
+        /* font-size: clamp(0.7rem, 0.09999999999999987rem + 3.0000000000000004vw, 1.0rem) !important; */
+        font-size: clamp(0.75rem, -0.04999999999999982rem + 3.9999999999999996vw, 1.15rem) !important;
+    }
+
+    .trueSearchContainer {
+        width: 70%;
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: clamp(0.4rem, 1.1102230246251565e-16rem + 1.9999999999999998vw, 0.6rem) !important;
+    }
+
+    .searchInputDiv {
+        width: 80%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .searchInput {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        display: flex;
+        text-align: start;
+        padding-left: 20%;
+        padding-right: 5%;
+        box-sizing: border-box;
+        font-size: clamp(0.7rem, -0.10000000000000031rem + 4.000000000000002vw, 1.1rem) !important;
+    }
+
+    .searchCancelIconDiv {
+        width: 20%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .searchCancelIcon {
+        /* font-size: 0.9rem; */
+        /* font-size: 1.2rem; */
+        font-size: clamp(0.9rem, 0.30000000000000016rem + 2.999999999999999vw, 1.2rem) !important;
+
+    }
+
+    .listTitleWrapper {
+        width: 50%;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: flex-start;
+        /* justify-content: flex-end; */
+        align-items: center;
+        /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+    }
+
+    .listTitleTextDiv {
+        width: auto;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        padding-left: 5%;
+        /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+    }
+
+    .searchResultText {
+        /* font-size: clamp(1.0rem, 0.0rem + 5.0vw, 1.5rem) !important; */
+        /* font-size: 0.9rem; */
+        /* font-size: 1.5rem; */
+        font-size: clamp(0.9rem, -0.29999999999999993rem + 6.0vw, 1.5rem) !important;
+    }
+
+    .listTitleText {
+        position: relative;
+        font-weight: var(--bolder-font);
+        margin-left: unset;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        font-size: clamp(1.1rem, -0.49999999999999956rem + 7.999999999999999vw, 1.9rem) !important;
+    }
+
+    .listTitleText::after {
+        position: absolute;
+        content: " ";
+        bottom: -8px;
+        left: 0px;
+        border-radius: 20px;
+    }
+
+    .listCountDiv {
+        height: 50%;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: clamp(0.2rem, -0.2rem + 2.0vw, 0.4rem) !important;
+        margin-left: 0.8rem;
+    }
+
+    .listCountDiv p {
+        position: relative;
+        font-size: clamp(0.5rem, 0.10000000000000009rem + 1.9999999999999998vw, 0.7rem) !important;
+        font-weight: var(--bold-font);
+        padding: 0px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    .searchInputWrapper {
+        width: 50%;
+        height: 80%;
+        /* border: 1spx solid red; */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-sizing: border-box;
+        padding-right: 5%;
+        min-height: 80%;
+    }
+}

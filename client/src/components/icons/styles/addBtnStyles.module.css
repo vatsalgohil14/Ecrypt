@@ -1,0 +1,12 @@
+.addBtnStyles {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    bottom: 10px;
+    right: 10px;
+    z-index: 65;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}

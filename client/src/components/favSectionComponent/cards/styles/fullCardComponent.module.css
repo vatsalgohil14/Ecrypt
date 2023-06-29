@@ -1,0 +1,621 @@
+@import "../../../variable.modules.css";
+
+.cardWrapper {
+    /* display: flex; */
+    display: none;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--box-bg-primary);
+    padding-left: 5%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+
+.cardWrapperClose {
+    /* display: flex; */
+    display: none;
+    width: 0%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--box-bg-primary);
+    padding-left: 0%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    scroll-behavior: smooth;
+}
+
+.cardContainer {
+    width: 70%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 25% minmax(0, 1fr);
+    grid-template-rows: 10% 17% 14% 14% 22% 22%;
+    grid-template-rows: 10% 18% 14% 14% 22% 22%;
+    grid-template-rows: 10% 20% 15% 55%;
+    grid-template-areas:
+        "cardHeader cardHeader"
+        "logoTitleWrapper logoTitleWrapper"
+        "categoryWrapper categoryWrapper"
+        "subcardWrapper subcardWrapper";
+    padding-bottom: 0%;
+    padding-top: 0%;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.cardHeader {
+    grid-area: cardHeader;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid orange; */
+}
+
+.backBtnContainer {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 0%;
+    padding-top: 0%;
+}
+
+.backBtnDiv {
+    width: auto;
+    height: 20px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0%;
+    padding-right: 5%;
+    border-radius: 5px;
+    margin-right: 10px;
+    /* transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); */
+    cursor: pointer;
+}
+
+
+.curdBtnContainer {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.favBtnDiv {
+    height: 60%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid greenyellow; */
+    cursor: pointer;
+
+}
+
+.spinner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid orange; */
+}
+
+
+.crudIcons {
+    margin-right: 5px;
+}
+
+
+.logoTitleWrapper {
+    grid-area: logoTitleWrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid blue; */
+    padding-left: 0%;
+}
+
+.logoTitleContainer {
+    width: 100%;
+    height: 85%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0%;
+
+}
+
+/* favBtnDiv */
+.logoContainer {
+    /* width: auto; */
+    /* width: 30%; */
+    height: 100%;
+    aspect-ratio: 1/1;
+    /* border: 1px solid orange; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid green; */
+    margin-right: 2%;
+
+}
+
+
+.logoDiv {
+    /* width: 80%; */
+    aspect-ratio: 1/1;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--box-bg-tertiary); */
+    background-color: var(--logo-div-bg);
+    border-radius: 20px;
+}
+
+.logoDivActive {
+    /* width: 80%; */
+    aspect-ratio: 1/1;
+    height: 100%;
+    border: 2px solid #a8ccf9b5;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logoIcon {
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+> We are using input instead of div for textField
+> because div will expand when using white-space:nowrap
+> but using input(readOnly) gives desired result
+*/
+
+.textInputCommonStyle {
+    border: none;
+    outline: none;
+    background: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-font-color);
+    font-weight: var(--bold-font);
+}
+
+
+.titleContainer {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 5%;
+    /* border: 1px solid red; */
+    border-radius: 0.8rem;
+}
+
+.titleLabelDiv {
+    width: 80%;
+    height: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.titleLabelDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+
+}
+
+.titleInputDiv {
+    width: 95%;
+    height: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.titleTextField {
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    /* border: 1px solid skyblue; */
+}
+
+.titleTextFieldFont {
+    font-size: 1.2rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+}
+
+.categoryWrapper {
+    grid-area: categoryWrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(182, 69, 88); */
+    padding-left: 0%;
+
+}
+
+.categoryContainer {
+    width: 100%;
+    height: 60%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--box-bg-tertiary);
+    border-radius: 10px;
+}
+
+.categoryLabelDiv {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid whitesmoke; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.categoryLabelDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: var(--bolder-font);
+    color: var(--primary-font-color);
+}
+
+.categoryInputDiv {
+    width: 50%;
+    height: 100%;
+    text-align: start;
+    /* border: 1px solid skyblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoryTextField {
+    width: 75%;
+    height: 80%;
+    border-radius: 0.4rem;
+    background-color: var(--category-box-bg);
+    text-align: center;
+}
+
+.categoryTextFieldFont {
+    font-size: 0.9rem;
+    font-weight: var(--bold-font);
+    color: var(--ui-scheme-color);
+}
+
+.subCardWrapper {
+    grid-area: subcardWrapper;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+    .cardWrapper {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 95%;
+        height: 100%;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        /* border: 1px solid red; */
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        /* margin-bottom: 2px; */
+        margin-bottom: 0.1rem;
+    }
+
+    .cardWrapperClose {
+        display: flex;
+        width: 100%;
+        height: 0%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0%;
+        webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px;
+        transition: none;
+        transition: all 10s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        /* border: 1px solid red; */
+        opacity: 0;
+    }
+
+    .cardContainer {
+        /* border: 1px solid black; */
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 25% minmax(0, 1fr);
+        grid-template-rows: 10% 17% 14% 14% 22% 22%;
+        grid-template-rows: 10% 18% 14% 14% 22% 22%;
+        grid-template-rows: 10% 20% 15% 55%;
+        grid-template-areas:
+            "cardHeader cardHeader"
+            "logoTitleWrapper logoTitleWrapper"
+            "categoryWrapper categoryWrapper"
+            "subcardWrapper subcardWrapper";
+        padding-bottom: 0%;
+        padding-top: 0%;
+        box-sizing: border-box;
+
+    }
+
+    .cardHeader {
+        grid-area: cardHeader;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid orange; */
+    }
+
+    .backBtnContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 5%;
+        padding-top: 0%;
+    }
+
+    .backBtnDiv {
+        height: 55%;
+    }
+
+    .curdBtnContainer {
+        width: 70%;
+        height: 100%;
+        padding-right: 5%;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .favBtnDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65%;
+        aspect-ratio: 1/1;
+        /* border: 1px solid black; */
+    }
+
+    .logoTitleWrapper {
+        grid-area: logoTitleWrapper;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid blue; */
+        padding-left: 0%;
+    }
+
+    .logoTitleContainer {
+        width: 90%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoContainer {
+        /* width: auto; */
+        /* width: 30%; */
+        height: 100%;
+        aspect-ratio: 1/1;
+        /* border: 1px solid orange; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        /* border: 1px solid green; */
+        margin-right: 2%;
+    }
+
+
+    .logoDiv {
+        /* width: 80%; */
+        aspect-ratio: 1/1;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: clamp(0.9rem, -0.29999999999999993rem + 6.0vw, 1.5rem) !important;
+    }
+
+
+    .logoIcon {
+        width: 100%;
+        height: 100%;
+    }
+
+    .titleContainer {
+        width: 70%;
+        height: 100%;
+        /* border: 1px solid red; */
+        padding-left: 5%;
+    }
+
+
+    .categoryContainer {
+        width: 90%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: clamp(0.5rem, 0.0rem + 2.5vw, 0.75rem) !important;
+    }
+
+    .subCardWrapper {
+        grid-area: subcardWrapper;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid red; */
+    }
+
+    .titleLabelDiv p {
+        font-size: clamp(0.75rem, 0.04999999999999982rem + 3.500000000000001vw, 1.1rem) !important;
+    }
+
+    .titleTextFieldFont {
+        font-size: clamp(1.0rem, -0.3999999999999999rem + 6.999999999999999vw, 1.7rem) !important;
+    }
+
+    .categoryLabelDiv p {
+        font-size: 1.2rem;
+        font-weight: var(--bolder-font);
+        font-size: clamp(1.0rem, 0.0rem + 5.0vw, 1.5rem) !important;
+    }
+
+    .categoryTextFieldFont {
+        font-weight: var(--bolder-font);
+        font-size: clamp(0.85rem, -0.15000000000000024rem + 5.000000000000001vw, 1.35rem) !important;
+    }
+
+}
+
+
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .cardWrapper {
+        display: none;
+        width: 60%;
+        height: 95%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: var(--box-bg-primary);
+        padding-left: 5%;
+        webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+        /* border: 1px solid red; */
+        padding-top: 5%;
+    }
+
+    .cardWrapperClose {
+        display: none;
+        width: 0%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: var(--box-bg-primary);
+        padding-left: 0%;
+        webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        scroll-behavior: smooth;
+    }
+
+    .cardContainer {
+        width: 93%;
+        height: 50%;
+        display: grid;
+        grid-template-columns: 25% minmax(0, 1fr);
+        grid-template-rows: 10% 17% 14% 14% 22% 22%;
+        grid-template-rows: 10% 18% 14% 14% 22% 22%;
+        grid-template-rows: 10% 20% 15% 55%;
+        grid-template-areas:
+            "cardHeader cardHeader"
+            "logoTitleWrapper logoTitleWrapper"
+            "categoryWrapper categoryWrapper"
+            "subcardWrapper subcardWrapper";
+        padding-bottom: 0%;
+        padding-top: 0%;
+        box-sizing: border-box;
+        /* border: 1px solid blue; */
+
+    }
+}

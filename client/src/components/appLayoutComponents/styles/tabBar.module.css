@@ -1,0 +1,81 @@
+@import "../../variable.modules.css";
+
+.tabBar {
+  display: none;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+  .tabBarSection {
+    position: relative;
+    grid-area: tabBarSection;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--box-bg-primary);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 50;
+  }
+
+  .tabIconWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    /* border: 1px solid red; */
+
+  }
+
+  .tabLinks {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 15px; */
+    /* border: 1px solid blue; */
+  }
+
+  .iconsDiv {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+  }
+
+  .tabbarIcons {
+    position: relative;
+    font-size: 30px;
+  }
+
+  .tabBarIndicator {
+    position: absolute;
+    width: 15%;
+    aspect-ratio: 1/1;
+    background-color: #AED2FF;
+    background-color: var(--box-bg-tertiary);
+    background-color: var(--box-bg-secondary-drk);
+    border-radius: 14px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    left: 0px;
+  }
+}

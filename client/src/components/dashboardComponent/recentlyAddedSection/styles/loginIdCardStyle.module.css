@@ -1,0 +1,961 @@
+.cardWrapperShrink {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 280px;
+    width: 45%;
+    height: 75px;
+    min-height: 75px;
+    border-radius: 0.95rem;
+
+    scroll-behavior: smooth;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: var(--box-bg-primary);
+    margin: 2% 2% 2% 2%;
+    box-shadow: var(--list-wrapper-box-shadow);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.cardWrapperExpand {
+    position: relative;
+    margin-top: 20px;
+    width: 50%;
+    height: 150%;
+    min-height: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.95rem;
+
+    background-color: var(--box-bg-primary);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: var(--list-wrapper-box-shadow);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cardContainerShrink {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "logoWrapper titleWrapper titleWrapper"
+        "logoWrapper usernameWrapperShrink usernameWrapperShrink";
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+}
+
+
+
+.cardContainerExpand {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 15% 15% 25% 25%;
+    grid-template-rows: 20% 15% 15% 25% 25%;
+    grid-template-rows: 25% 15% 15% 20% 20%;
+    grid-row-gap: 2%;
+    grid-template-areas:
+        "logoWrapper titleWrapper titleWrapper titleWrapper"
+        "categoryLabelWrapper categoryLabelWrapper categroryTextWrapper categroryTextWrapper"
+        "appWebsiteLabelWrapper appWebsiteLabelWrapper appWebsiteTextWrapper appWebsiteTextWrapper"
+        "usernameWrapper usernameWrapper usernameWrapper usernameWrapper"
+        "passwordWrapper passwordWrapper passwordWrapper passwordWrapper";
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* border: 1px solid black; */
+}
+
+/* ____________________________________ */
+
+.logoWrapper {
+    grid-area: logoWrapper;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    width: 100%;
+    /* height: 100%; */
+    /* background-color: var(--box-bg-tertiary); */
+    /* border: 1px solid red; */
+}
+
+.logoDivShrink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.85rem;
+    background-color: var(--logo-div-bg);
+    height: 82%;
+    width: 82%;
+    /* border: 1px solid red; */
+}
+
+/* ____________________________________ */
+
+.titleWrapper {
+    grid-area: titleWrapper;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.titleLabelDiv {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* border: 1px solid black; */
+    padding-left: 5%;
+
+}
+
+.titleLabelDiv p {
+    font-family: "Poppins", sans-serif;
+    /* font-size: 0.7rem !important; */
+    /* font-size: 1rem !important; */
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+}
+
+.titleTextDiv {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid black; */
+    padding-left: 5%;
+}
+
+.titleTextDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+}
+
+.titleTextDivShrink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* border: 1px solid black; */
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.titleTextDivShrink p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+}
+
+
+/* ____________________________________ */
+
+.categoryLabelWrapper {
+    grid-area: categoryLabelWrapper;
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--box-bg-tertiary);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+
+.categoryLabelDiv {
+    width: 1000%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.categoryLabelDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: var(--bolder-font);
+    color: var(--primary-font-color);
+}
+
+.categroryTextWrapper {
+    grid-area: categroryTextWrapper;
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--box-bg-tertiary);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+}
+
+.categoryTextDiv {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    background-color: var(--category-box-bg);
+    border-radius: 5px;
+}
+
+.categoryTextDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    font-weight: var(--bold-font);
+    color: var(--ui-scheme-color);
+}
+
+/* ____________________________________ */
+
+.appWebsiteLabelWrapper {
+    grid-area: appWebsiteLabelWrapper;
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid black; */
+    background-color: var(--box-bg-tertiary);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.appWebsiteLabelDiv {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.appWebsiteLabelDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+}
+
+.appWebsiteTextWrapper {
+    grid-area: appWebsiteTextWrapper;
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--box-bg-tertiary);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.appWebsiteTextDiv {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+}
+
+.appWebsiteTextDiv p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.65rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+    white-space: nowrap;
+}
+
+/* ___________________________________________ */
+
+.usernameWrapper {
+    grid-area: usernameWrapper;
+    display: grid;
+    height: 80%;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "usernameIconWrapper usernameLabelWrapper"
+        "usernameIconWrapper usernameTextWrapper";
+    /* border: 1px solid green; */
+    /* background-color: forestgreen; */
+    background-color: var(--box-bg-tertiary);
+    border-radius: 8px;
+
+}
+
+.usernameWrapperShrink {
+    grid-area: usernameWrapperShrink;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+        "usernameTextWrapper";
+    /* background-color: forestgreen; */
+}
+
+
+.usernameIconWrapper {
+    grid-area: usernameIconWrapper;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usernameLabelWrapper {
+    grid-area: usernameLabelWrapper;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.usernameLabelWrapper p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.65rem;
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+}
+
+
+.usernameTextWrapper {
+    grid-area: usernameTextWrapper;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0%;
+    padding-right: 5%;
+}
+
+.usernameText {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.65rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+}
+
+.usernameTextShrink {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.7rem;
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+    margin-left: 5%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ____________________________________ */
+
+.passwordWrapper {
+    grid-area: passwordWrapper;
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "passwordIconWrapper passwordLabelWrapper"
+        "passwordIconWrapper passwordTextWrapper";
+    background-color: var(--box-bg-tertiary);
+    border-radius: 8px;
+}
+
+.passwordIconWrapper {
+    grid-area: passwordIconWrapper;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passwordLabelWrapper {
+    grid-area: passwordLabelWrapper;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.passwordLabelWrapper p {
+    font-family: "Poppins", sans-serif;
+    /* font-size: 0.65rem !important; */
+    font-weight: var(--bolder-font);
+    color: var(--secondary-font-color);
+}
+
+
+.passwordTextWrapper {
+    grid-area: passwordTextWrapper;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+
+.passwordTextWrapper p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.65rem;
+
+    font-weight: var(--bold-font);
+    color: var(--primary-font-color);
+}
+
+.fieldIcons {
+    font-size: 1.5rem;
+    color: var(--field-icon-color);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .cardWrapperShrink {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        width: 83%;
+        height: 85px !important;
+        min-height: 85px;
+        scroll-behavior: smooth;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        /* border: 1px solid black; */
+        margin: 15px 15px 15px 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cardWrapperExpand {
+        position: relative;
+        margin-top: 20px;
+        width: 83%;
+        height: 90%;
+        min-height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        /* border: 1px solid rebeccapurple; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cardContainerShrink {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: 85px minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+            "logoWrapper titleWrapper titleWrapper"
+            "logoWrapper usernameWrapperShrink usernameWrapperShrink";
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .cardContainerExpand {
+        position: relative;
+        width: 90%;
+        height: 90%;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 20% 15% 15% 25% 25%;
+        grid-template-rows: 20% 15% 15% 25% 25%;
+        grid-template-rows: 25% 15% 15% 20% 20%;
+        grid-row-gap: 2%;
+        grid-template-areas:
+            "logoWrapper titleWrapper titleWrapper titleWrapper"
+            "categoryLabelWrapper categoryLabelWrapper categroryTextWrapper categroryTextWrapper"
+            "appWebsiteLabelWrapper appWebsiteLabelWrapper appWebsiteTextWrapper appWebsiteTextWrapper"
+            "usernameWrapper usernameWrapper usernameWrapper usernameWrapper"
+            "passwordWrapper passwordWrapper passwordWrapper passwordWrapper";
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        /* border: 1px solid black; */
+
+    }
+
+    /* ____________________________________ */
+
+    .logoWrapper {
+        grid-area: logoWrapper;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        /* border: 1px solid white; */
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 88%;
+        width: 88%;
+    }
+
+    .logoDivShrink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 88%;
+        width: 88%;
+    }
+
+    /* ____________________________________ */
+
+    .titleWrapper {
+        grid-area: titleWrapper;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .titleLabelDiv {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-left: 5%;
+
+    }
+
+    .titleLabelDiv p {
+        font-size: clamp(0.65rem, 0.050000000000000155rem + 2.999999999999999vw, 0.95rem) !important;
+        font-weight: var(--bolder-font);
+    }
+
+    .titleTextDiv {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 5%;
+        /* border: 1px solid white; */
+    }
+
+    .titleTextDiv p {
+        font-size: clamp(0.9rem, -1.1102230246251565e-16rem + 4.500000000000001vw, 1.35rem) !important;
+        /* font-size: 0.9rem; */
+        /* font-size: 1rem; */
+        /* font-size: 1.2rem; */
+        /* font-size: 1.3rem; */
+        font-weight: var(--bold-font);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .titleTextDivShrink {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-left: 5%;
+    }
+
+    .titleTextDivShrink p {
+        font-size: clamp(0.8rem, 0.5000000000000002rem + 1.4999999999999991vw, 0.95rem) !important;
+        font-weight: var(--bolder-font);
+        /* white-space: nowrap; */
+        /* overflow: hidden; */
+        /* text-overflow: ellipsis */
+    }
+
+
+    /* ____________________________________ */
+
+    .categoryLabelWrapper {
+        grid-area: categoryLabelWrapper;
+        width: 100%;
+        height: 80%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+
+    .categoryLabelDiv {
+        width: 1000%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10%;
+    }
+
+    .categoryLabelDiv p {
+        font-size: clamp(0.85rem, 0.15000000000000002rem + 3.4999999999999996vw, 1.2rem) !important;
+        font-weight: var(--bolder-font);
+    }
+
+    .categroryTextWrapper {
+        grid-area: categroryTextWrapper;
+        width: 100%;
+        height: 80%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+
+    }
+
+    .categoryTextDiv {
+        width: 80%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+        border-radius: 5px;
+    }
+
+    .categoryTextDiv p {
+        font-size: clamp(0.65rem, -0.04999999999999993rem + 3.4999999999999996vw, 1.0rem) !important;
+        font-weight: var(--bold-font);
+    }
+
+    /* ____________________________________ */
+
+    .appWebsiteLabelWrapper {
+        grid-area: appWebsiteLabelWrapper;
+        width: 100%;
+        height: 80%;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .appWebsiteLabelDiv {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10%;
+    }
+
+    .appWebsiteLabelDiv p {
+        font-size: clamp(0.8rem, 0.19999999999999996rem + 3.0000000000000004vw, 1.1rem) !important;
+        font-weight: var(--bolder-font);
+    }
+
+    .appWebsiteTextWrapper {
+        grid-area: appWebsiteTextWrapper;
+        width: 100%;
+        height: 80%;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .appWebsiteTextDiv {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 5%;
+    }
+
+    .appWebsiteTextDiv p {
+        font-size: 0.9rem;
+        font-weight: var(--bold-font);
+    }
+
+    /* ___________________________________________ */
+
+    .usernameWrapper {
+        grid-area: usernameWrapper;
+        display: grid;
+        height: 80%;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+            "usernameIconWrapper usernameLabelWrapper"
+            "usernameIconWrapper usernameTextWrapper";
+        /* border: 1px solid green; */
+        /* background-color: forestgreen; */
+        border-radius: 8px;
+
+    }
+
+    .usernameWrapperShrink {
+        grid-area: usernameWrapperShrink;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "usernameTextWrapper";
+    }
+
+
+    .usernameIconWrapper {
+        grid-area: usernameIconWrapper;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .usernameLabelWrapper {
+        grid-area: usernameLabelWrapper;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+    .usernameLabelWrapper p {
+        font-size: clamp(0.65rem, 0.050000000000000155rem + 2.999999999999999vw, 0.95rem) !important;
+        font-weight: var(--bolder-font);
+    }
+
+
+    .usernameTextWrapper {
+        grid-area: usernameTextWrapper;
+        width: 95%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* border: 1px solid red; */
+    }
+
+    .usernameText {
+        font-size: clamp(0.65rem, 0.050000000000000155rem + 2.999999999999999vw, 0.95rem) !important;
+        font-weight: var(--bold-font);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
+
+    .usernameTextShrink {
+        font-size: 13px;
+        font-weight: var(--bolder-font);
+        margin-left: 5%;
+        font-size: clamp(0.8rem, 0.5000000000000002rem + 1.4999999999999991vw, 0.95rem) !important;
+    }
+
+    /* ____________________________________ */
+
+    .passwordWrapper {
+        grid-area: passwordWrapper;
+        width: 100%;
+        height: 80%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+            "passwordIconWrapper passwordLabelWrapper"
+            "passwordIconWrapper passwordTextWrapper";
+        border-radius: 8px;
+    }
+
+    .passwordIconWrapper {
+        grid-area: passwordIconWrapper;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .passwordLabelWrapper {
+        grid-area: passwordLabelWrapper;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .passwordLabelWrapper p {
+        font-size: clamp(0.65rem, 0.050000000000000155rem + 2.999999999999999vw, 0.95rem) !important;
+        font-weight: var(--bolder-font);
+    }
+
+    .passwordTextWrapper {
+        grid-area: passwordTextWrapper;
+        width: 100%;
+        height: 100%;
+    }
+
+    .passwordTextWrapper p {
+        font-size: clamp(0.65rem, 0.050000000000000155rem + 2.999999999999999vw, 0.95rem) !important;
+        font-weight: var(--bold-font);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
+
+    .fieldIcons {
+        font-size: 28px !important;
+    }
+
+}
+
+
+/* @media only screen and (min-device-width: 480px) and (max-device-width: 1020px) {
+
+    .cardWrapperShrink {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 75px;
+        min-height: 75px;
+        border-radius: 15px;
+        scroll-behavior: smooth;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        margin: 2% 2% 2% 2%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .cardWrapperExpand {
+        position: relative;
+        margin-top: 20px;
+        width: 90%;
+        height: 90%;
+        min-height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: unset;
+    }
+
+} */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    .cardWrapperShrink {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 75px;
+        min-height: 75px;
+        border-radius: 15px;
+        scroll-behavior: smooth;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        margin: 2% 2% 2% 2%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .cardWrapperExpand {
+        position: relative;
+        margin-top: 20px;
+        width: 90%;
+        height: 90%;
+        min-height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: unset;
+    }
+
+}
